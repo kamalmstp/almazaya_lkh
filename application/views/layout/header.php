@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="ThemeBucket">
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>assets/logo1.png">
     <title><?php echo $title; ?></title>
     <!--Core CSS -->
     <link href="<?= base_url() ?>assets/bs3/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,7 @@
 <!--logo start-->
 <div class="brand">
     <a href="<?= site_url("") ?>" class="logo">
+        <img src="<?= base_url() ?>assets/logo1.png" width="20%" alt="">
         E-Kinerja
     </a>
     <div class="sidebar-toggle-box">
@@ -73,13 +74,13 @@
                 <li>
                     <a href="<?= site_url('penilaian') ?>">
                         <i class="fa fa-dashboard"></i>
-                        <span>Penilaian</span>
+                        <span>Kegiatan</span>
                     </a>
                 </li>
                 <li>
                     <a href="<?= site_url('penilaian/all') ?>">
                         <i class="fa fa-dashboard"></i>
-                        <span>Lihat Semua Penilaian</span>
+                        <span>Lihat Semua Kegiatan</span>
                     </a>
                 </li>
                 <?php } ?>

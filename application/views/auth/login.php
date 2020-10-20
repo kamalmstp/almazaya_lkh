@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="ThemeBucket">
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>assets/logo1.png">
 
     <title>E-Kinerja Puspindes</title>
 
@@ -37,7 +37,7 @@
 
       <form class="form-signin" action="auth/login" method="post">
         <h2 class="form-signin-heading">
-          <img src="assets/images/puspindes.png">
+          <img src="<?= base_url() ?>assets/logo1.png" style="width: 50%;">
         </h2>
         <div class="login-wrap">
         	<?php
@@ -54,7 +54,7 @@
             <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
 
             <div class="registration">
-              Puspindes 2019
+              Yayasan Swadaya Insan Cendikia
             </div>
 
         </div>

@@ -110,6 +110,29 @@ class Kinerja extends CI_Controller {
 
 		</script>
 			';
+		$this->load->library('upload');
+        
+            $config['upload_path'] = './uploads/foto/';
+            $config['allowed_types'] = '*';
+            $config['encrypt_name'] = TRUE;
+     
+            $this->upload->initialize($config);
+            if ($this->upload->do_upload('images_start')){
+                $gbr = $this->upload->data();
+                //Compress Image
+                $config['image_library']='gd2';
+                $config['source_image']='./uploads/foto/'.$gbr['file_name'];
+                $config['create_thumb']= FALSE;
+                $config['maintain_ratio']= FALSE;
+                $config['quality']= '50%';
+                $config['width']= 600;
+                $config['height']= 400;
+                $config['new_image']= './uploads/foto/'.$gbr['file_name'];
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
+    
+        $nama      = $gbr['file_name'];
+    }
 		$data['jenkin'] =$this->M_Kinerja->getJenKin();
 		$this->load->view("layout/header",$data);
 		$this->load->view("kinerja/create");
